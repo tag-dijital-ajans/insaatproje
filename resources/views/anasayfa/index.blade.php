@@ -13,7 +13,7 @@
             </div>
             <div class="col-md-6">
                 <p class="mt-xl">Konut ve yeşil alanlardan ulaşım ve ve altyapıya pek çok alanda yürüttüğü prestijli projelerle Türkiye'de inşaat sektöründe öncü konuma gelen firmamız "{{$ayar->site_adi}} "; profesyonel ekibi ve üstün kalite anlayışıyla Türkiye'nin ve Dünya'nın geleceğine yatırım yapmayı sürdürüyoruz..</p>
-                <a class="mt-md" href="demo-construction-company.html">Daha Fazla.. <i class="fa fa-long-arrow-right"></i></a>
+                <a class="mt-md" href="{{route('hakkimizda.goster')}}">Daha Fazla.. <i class="fa fa-long-arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -25,35 +25,41 @@
             <div class="row pt-xl">
                 <div class="col-md-12">
                     <h2 class="mb-none text-color-dark">Projeler</h2>
-                    <p class="lead">Güvenceli İnşaat</p>
+                    <p class="lead">Merhaba Proje</p>
 
                     <div class="diamonds-wrapper lightbox" data-plugin-options='{"delegate": ".diamond", "type": "image", "gallery": {"enabled": true}}'>
-
                         <ul class="diamonds">
-
+ @foreach($projeler as $proje)
                             <li>
-                                @foreach($projeler as $proje)
-                                <a href="/anasayfa/img/demos/construction/gallery/construction-gallery-1.jpg" class="diamond">
+                                <a href="{{$proje->proje_resim}}" class="diamond" >
                                     <div class="content">
-
-                                        <img src="{{$proje->proje_resim}}" class="img-responsive" />
-
+                                        <img src="{{$proje->proje_resim}}"  class="img-responsive" />
                                     </div>
                                 </a>
-                                @endforeach
                             </li>
+ @endforeach
+                            <br> <br> <br><br> <br> <br>  <br> <br> <br>
+
+
+                           {{-- <li>
+                                <a href="{{$project->proje_resim}}" class="diamond-sm">
+                                    <div class="content">
+                                        <img src="{{$project->proje_resim}}" class="img-responsive" />
+                                    </div>
+                                </a>
+                            </li>
+--}}
+     @en
 
                         </ul>
-
                     </div>
-
 
                 </div>
             </div>
             <div class="row row-diamons-description">
                 <div class="col-md-6">
-                    <p>Uluslararası İnşaat Yapı İşlemleri</p>
-                    <a class="btn btn-borders btn-primary" href="demo-construction-projects.html">View All Projects</a>
+                    <p>Kuşadası Adavizyon Yapı İnşaat Taahüt ve Ticari Anonim Şirketi</p>
+                    <a class="btn btn-borders btn-primary" href="{{route('projeleri.goster')}}">Bütün Projeleri Görüntüle</a>
                 </div>
             </div>
         </div>
@@ -146,7 +152,7 @@
             <div class="recent-posts mt-xl">
 
                 <a href="/haber/{{$icerik->id}}/{{$icerik->slug}}">
-                    <img class="img-responsive pb-md" src="{{$icerik->resim}}" alt="Blog" >
+                    <img class="img-responsive pb-md" src="/{{$icerik->resim}}" alt="Blog" >
                 </a>
                 <article class="post">
                     <div class="date">

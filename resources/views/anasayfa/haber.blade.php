@@ -35,7 +35,7 @@
                                     <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
                                 </div>
 
-                                <img src="{{$haber->resim}}" class="img-responsive pull-right mb-md mb-xs ml-xl" alt="" style="width: 360px;">
+                                <img src="/{{$haber->resim}}" class="img-responsive pull-right mb-md mb-xs ml-xl" alt="" style="width: 360px;">
 
                                 <p>{!! $haber->icerik  !!}</p>
 

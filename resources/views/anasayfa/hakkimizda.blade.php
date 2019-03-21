@@ -40,10 +40,10 @@
                             <div class="slider-wrapper theme-default">
 
                                 <div id="nivoSlider" class="nivoSlider mt-none mb-xlg">
-                                    <img src="/anasayfa/img/demos/construction/slides/slide-construction-small-1.jpg" data-thumb="img/demos/construction/slides/slide-construction-small-1.jpg" alt="" />
-                                    <img src="/anasayfa/img/demos/construction/slides/slide-construction-small-2.jpg" data-thumb="img/demos/construction/slides/slide-construction-small-2.jpg" alt="" />
-                                    <img src="/anasayfa/img/demos/construction/slides/slide-construction-small-3.jpg" data-thumb="img/demos/construction/slides/slide-construction-small-3.jpg" alt="" />
-                                    <img src="/anasayfa/img/demos/construction/slides/slide-construction-small-4.jpg" data-thumb="img/demos/construction/slides/slide-construction-small-4.jpg" alt="" />
+                                    <img src="/anasayfa/img/demos/construction/slides/slide-construction-small-1.jpg" data-thumb="/anasayfa/img/demos/construction/slides/slide-construction-small-1.jpg" alt="" />
+                                    <img src="/anasayfa/img/demos/construction/slides/slide-construction-small-2.jpg" data-thumb="/anasayfa/img/demos/construction/slides/slide-construction-small-2.jpg" alt="" />
+                                    <img src="/anasayfa/img/demos/construction/slides/slide-construction-small-3.jpg" data-thumb="/anasayfa/img/demos/construction/slides/slide-construction-small-3.jpg" alt="" />
+                                    <img src="/anasayfa/img/demos/construction/slides/slide-construction-small-4.jpg" data-thumb="/anasayfa/img/demos/construction/slides/slide-construction-small-4.jpg" alt="" />
                                 </div>
                                 <div id="htmlcaption" class="nivo-html-caption"></div>
                             </div>
@@ -62,7 +62,7 @@
 
                         <div class="row">
                             <div class="col-md-7">
-                                <img class="pull-left img-responsive mr-lg mb-md mt-xl appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0" width="200" src="/anasayfa/img/office/office-1.jpg" alt="">
+                                <img class="pull-left img-responsive mr-lg mb-md mt-xl appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"   src="{{$yazi->resim}}" alt="">
                                 <p class="mt-lg">{!! $yazi->icerik !!}</p>
                                 <p class="mt-lg"></p>
                             </div>

@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <a href="demo-construction.html">
-                    <img alt="Porto" class="img-responsive logo" width="110" src="{{$ayar->favicon}}">
+                <a href="/">
+                    <img alt="Porto" class="img-responsive logo" width="110" src="/{{$ayar->favicon}}">
                 </a>
             </div>
             <div class="col-md-4">
@@ -17,28 +17,30 @@
                         <ul class="list list-footer-nav">
                             @foreach($menuler as $menu)
                             <li>
-                                <a href="demo-construction.html">
+                                <a href="/">
                                     {{$menu->menu_baslik}}
                                  </a>
                              </li>
                             @endforeach
                              <li>
-                               {{--  <a href="{{route('projeleri.goster')}}">--}}
+                               <a href="{{route('projeleri.goster')}}">
+
                                      Projeler
                                  </a>
                              </li>
+                                <li>
+                                    <a href="{{route('hakkimizda.goster')}}">
+                                        Hakkımızda
+                                    </a>
+                                </li>
 
                          </ul>
                      </div>
                      <div class="col-md-6">
                          <ul class="list list-footer-nav">
+
                              <li>
-                                 <a href="demo-construction-projects.html">
-                                     Blog
-                                 </a>
-                             </li>
-                             <li>
-                                 <a href="demo-construction-blog.html">
+                                 <a href="{{route('iletisim.formu')}}">
                                      İletişim
                                  </a>
                              </li>
@@ -47,8 +49,6 @@
                                      Haberler
                                  </a>
                              </li>
-
-
                          </ul>
                      </div>
                  </div>

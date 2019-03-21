@@ -35,7 +35,7 @@ class HomeController extends Controller
         $referanslar = Referans::orderby('created_at','desc')->take(7)->get();
 
 
-        return view('anasayfa.index',compact('sliders','services','icerikler','partners','projeler','referanslar'));
+        return view('anasayfa.index',compact('sliders','services','icerikler','partners','projeler','referanslar','projects'));
     }
 
     public function cikis()  {
@@ -65,6 +65,7 @@ class HomeController extends Controller
 
     }
 
+
     public function hizmetler(){
 
         $hizmetler = Hizmet::all();
@@ -74,9 +75,11 @@ class HomeController extends Controller
 
     public function hizmet($id){
 
-        $hizmet = Hizmet::find($id);
+        $hizmetler = Hizmet::orderby('created_at','desc')->take(1)->get();
+        $yazilar = Yazi::orderby('created_at','desc')->take(4)->get();
         $listhizmetler = Hizmet::all();
-            return view('anasayfa.hizmet', compact('hizmet','listhizmetler'));
+
+            return view('anasayfa.hizmet', compact('hizmetler','listhizmetler','yazilar'));
         }
 
     public function haberler(){
@@ -93,13 +96,12 @@ class HomeController extends Controller
     }
     public function projeler(){
         $projeler = Proje::all();
-
         return view('anasayfa.projeler',compact('projeler'));
     }
     public function proje($id){
         $proje = Proje::find($id);
-        $projelerr = Proje::all();
-        return view ('anasayfa.proje',compact('proje','projelerr'));
+        $projeler = Proje::all();
+        return view ('anasayfa.proje',compact('proje','projeler'));
 
 
     }

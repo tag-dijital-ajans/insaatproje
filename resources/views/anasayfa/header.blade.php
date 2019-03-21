@@ -4,9 +4,9 @@
             <div class="header-row">
                 <div class="header-column">
                     <div class="header-logo">
-                        <img class="logo-default" alt="Porto" width="324" height="212" src="{{$ayar->favicon}}">
-                        <a href="demo-construction.html">
-                            <img class="logo-small" alt="Porto" width="131" height="48" src="{{$ayar->logo}}">
+                        <img class="logo-default" alt="Porto" width="324" height="212" src="/{{$ayar->logo}}">
+                        <a href="/">
+                            <img class="logo-small" alt="Porto" width="131" height="48" src="/{{$ayar->favicon}}">
                         </a>
                     </div>
                 </div>
@@ -19,6 +19,10 @@
                             <ul class="header-social-icons social-icons visible-lg">
                                 <li class="social-icons-facebook"><a href="{{$ayar->facebook}}" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                                 <li class="social-icons-twitter"><a href="{{$ayar->twitter}}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li class="social-icons-linkedin"><a href="{{$ayar->linkedin}}" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                <li class="social-icons-youtube"><a href="{{$ayar->youtube}}" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+
+
                             </ul>
                             <div class="header-nav-main header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1 collapse">
                                 <nav>

@@ -66,9 +66,6 @@ Route::get('/referans/{id}/{slug}','HomeController@referans');
 Route::get('/bloglar','HomeController@bloglar')->name('bloglari.goster');
 Route::get('/blog,/{id}/{slug}','HomeController@blog');
 
-
-
-
 //Hizmetler
 Route::get('/hizmetler','HomeController@hizmetler')->name('hizmetleri.goster');
 Route::get('/hizmet/{id}/{slug}','HomeController@hizmet');

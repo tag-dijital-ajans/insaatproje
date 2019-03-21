@@ -42,10 +42,10 @@
                             @foreach($projeler as $proje)
                             <div class="owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover" id="thumbGalleryDetail">
                                 <div>
-                                    <a href="{{$proje->proje_resim}}">
+                                    <a href="/{{$proje->proje_resim}}">
 												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
 													<span class="thumb-info-wrapper font-size-xl">
-														<img alt="Project Image" src="{{$proje->proje_resim}}" class="img-responsive">
+														<img alt="Project Image" src="/{{$proje->proje_resim}}" class="img-responsive">
 														<span class="thumb-info-title font-size-xl">
 															<span class="thumb-info-inner font-size-xl"><i class="icon-magnifier icons font-size-xl"></i></span>
 														</span>
@@ -58,12 +58,13 @@
 
                             </div>
                             @endforeach
+
                         </div>
 
                         <div class="owl-carousel owl-theme manual thumb-gallery-thumbs mt" id="thumbGalleryThumbs">
 
                             <div>
-                                <img alt="Project Image" src="{{$proje->proje_resim}}" class="img-responsive cur-pointer">
+                                <img alt="Project Image" src="/{{$proje->proje_resim}}" class="img-responsive cur-pointer">
                             </div>
 
 

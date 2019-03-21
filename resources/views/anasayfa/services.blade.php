@@ -19,7 +19,9 @@
                     <div class="feature-box-info ml-md">
                         <h4 class="mb-sm">{{$service->hizmet_basligi}}</h4>
                         <p>{!! $service->hizmet_icerik !!}</p>
-                        <a class="mt-md" href="/hizmet/{{$service->slug}}">/hizmet/{{$service->id}}/{{$service->slug}} <i class="fa fa-long-arrow-right"></i></a>
+                        <a class="mt-md" href="/hizmet/{{$service->id}}/{{$service->slug}}">Daha Fazla <i class="fa fa-long-arrow-right"></i></a>
+
+
                     </div>
 
                 </div>
