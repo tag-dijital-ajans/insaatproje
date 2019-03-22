@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row mt-xl">
                     <div class="col-md-10 col-md-offset-2 pt-xlg mt-xlg align-right">
-                        <h1 class="text-uppercase font-weight-light mt-xl text-color-primary">Hizmetler</h1>
+                        <h1 class="text-uppercase font-weight-light mt-xl text-color-primary">HİZMETLER</h1>
                     </div>
                 </div>
             </div>

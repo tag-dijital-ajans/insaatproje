@@ -87,6 +87,19 @@
 
         </div>
     </div>
+
+    <!--A Design by W3layouts
+ Author: W3layout
+ Author URL: http://w3layouts.com
+ License: Creative Commons Attribution 3.0 Unported
+ License URL: http://creativecommons.org/licenses/by/3.0/
+ -->
+
+
+
+
+
+
    {{-- <!-- Title page -->
     <section class="bg-img1 kit-overlay1" style="background-image: url(/anasayfa/images/bg-05.jpg);">
         <div class="container size-h-3 p-tb-30 flex-col-c-c">
@@ -204,5 +217,6 @@
 
 
 @section('js')
+
 
 @endsection

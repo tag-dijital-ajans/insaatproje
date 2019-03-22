@@ -49,6 +49,11 @@
                                      Haberler
                                  </a>
                              </li>
+                             <li class="dropdown">
+                                 <a class="dropdown-toggle" href="{{route('galeriler.goster')}}">
+                                     Galeri
+                                 </a>
+                             </li>
                          </ul>
                      </div>
                  </div>

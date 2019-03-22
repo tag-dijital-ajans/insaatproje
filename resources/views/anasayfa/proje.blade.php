@@ -25,8 +25,8 @@
                                 <h2 class="mb-none">{{$proje->proje_adi}}</h2>
                             </div>
                             <div class="portfolio-nav col-md-1">
-                                <a href="demo-construction-projects-detail.html" class="portfolio-nav-prev" data-tooltip data-original-title="İleri"><i class="fa fa-chevron-left"></i></a>
-                                <a href="demo-construction-projects-detail.html" class="portfolio-nav-next" data-tooltip data-original-title="Geri"><i class="fa fa-chevron-right"></i></a>
+                                <a href="" class="portfolio-nav-prev" data-tooltip data-original-title="Geri"><i class="fa fa-chevron-left"></i></a>
+                                <a href="" class="portfolio-nav-next" data-tooltip data-original-title="İleri"><i class="fa fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>

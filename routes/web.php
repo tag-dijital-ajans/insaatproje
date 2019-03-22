@@ -77,4 +77,7 @@ Route::get('/haber/{id}/{slug}','HomeController@haber');
 //Projeler
 Route::get('/projeler','HomeController@projeler')->name('projeleri.goster');
 Route::get('/proje/{id}/{slug}','HomeController@proje');
+//Galeri
+Route::get('/galeriler','HomeController@galeriler')->name('galeriler.goster');
+Route::get('/galeri','HomeController@galeri');
 

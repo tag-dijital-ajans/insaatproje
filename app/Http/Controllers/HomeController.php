@@ -35,6 +35,7 @@ class HomeController extends Controller
         $referanslar = Referans::orderby('created_at','desc')->take(7)->get();
 
 
+
         return view('anasayfa.index',compact('sliders','services','icerikler','partners','projeler','referanslar','projects'));
     }
 
@@ -62,6 +63,11 @@ class HomeController extends Controller
 
         $referanslar = Referans::all();
         return view('anasayfa.referanslar', compact('referanslar'));
+
+    }
+    public function galeriler(){
+        $galeriler = Galeri::all();
+        return view('anasayfa.galeri',compact('galeriler'));
 
     }
 

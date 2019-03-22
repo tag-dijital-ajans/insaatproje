@@ -66,8 +66,11 @@
                                                             <a href="{{route('haberler.goster')}}">Haberler</a>
                                                         </li>
                                                         <li>
-                                                            <a href="{{route('iletisim.formu')}}">İletişim</a>
+                                                            <a href="{{route('iletisim.formu')}}">İLETİŞİM</a>
                                                         </li>
+                                                <li>
+                                                    <a href="{{route('galeriler.goster')}}">GALERİ</a>
+                                                </li>
                                     </ul>
                                 </nav>
                             </div>
