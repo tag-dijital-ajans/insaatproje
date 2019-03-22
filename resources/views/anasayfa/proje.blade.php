@@ -39,7 +39,7 @@
                 <div class="col-md-4">
                     <div class="thumb-gallery">
                         <div class="lightbox" data-plugin-options='{"delegate": "a", "type": "image", "gallery": {"enabled": true}}'>
-                            @foreach($projeler as $proje)
+                          {{--  @foreach($projeler as $proje)--}}
                             <div class="owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover" id="thumbGalleryDetail">
                                 <div>
                                     <a href="/{{$proje->proje_resim}}">
@@ -53,12 +53,9 @@
 												</span>
                                     </a>
                                 </div>
-
-
-
                             </div>
-                            @endforeach
-
+                    {{--        @endforeach
+--}}
                         </div>
 
                         <div class="owl-carousel owl-theme manual thumb-gallery-thumbs mt" id="thumbGalleryThumbs">
@@ -66,12 +63,6 @@
                             <div>
                                 <img alt="Project Image" src="/{{$proje->proje_resim}}" class="img-responsive cur-pointer">
                             </div>
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -79,35 +70,37 @@
 
                     <div class="project-detail-construction">
 
-                        <p>{!! $proje->proje_aciklama !!}</p>
+                        <h3 style="color: #e04622 ">PROJE HAKKINDA </h3>
 
                         <div class="row">
                             <div class="col-md-5">
 
                                 <ul class="list-project-details">
                                     <li>
-                                        <label>Project Location:</label>
-                                        <p>New York</p>
+                                        <label>PROJE YERİ :</label>
+                                        <p>{{$proje->proje_lokasyon}}</p>
                                     </li>
                                     <li>
-                                        <label>Project Type:</label>
-                                        <p>General Construction</p>
+                                        <label>PROJE TİPİ :</label>
+                                        <p>{{$proje->proje_tipi}}</p>
                                     </li>
                                     <li>
-                                        <label>Project Cost:</label>
+                                        <label>PROJE MALİYETİ :</label>
                                         <p>$100,000</p>
                                     </li>
                                     <li>
-                                        <label>Client:</label>
-                                        <p>Okler Themes</p>
+                                        <label>PROJE MÜŞTERİ :</label>
+                                        <p>{{$proje->proje_musteri}}</p>
                                     </li>
                                 </ul>
 
                             </div>
-                            <div class="col-md-7">
+
+                           {!!  $proje->proje_aciklama !!}
+                       {{--     <div class="col-md-7">
                                 <div class="progress-bars progress-bars-project-detail">
                                     <div class="progress-label">
-                                        <span>General Progress</span>
+                                        <span>Genel İlerleme</span>
                                     </div>
                                     <div class="progress progress-sm">
                                         <div class="progress-bar progress-bar-primary" data-appear-progress-animation="81%">
@@ -115,7 +108,7 @@
                                         </div>
                                     </div>
                                     <div class="progress-label">
-                                        <span>Phase 1</span>
+                                        <span>Faz 1</span>
                                     </div>
                                     <div class="progress progress-sm">
                                         <div class="progress-bar progress-bar-primary" data-appear-progress-animation="85%" data-appear-animation-delay="300">
@@ -123,7 +116,7 @@
                                         </div>
                                     </div>
                                     <div class="progress-label">
-                                        <span>Phase 2</span>
+                                        <span>Faz 2</span>
                                     </div>
                                     <div class="progress progress-sm">
                                         <div class="progress-bar progress-bar-primary" data-appear-progress-animation="75%" data-appear-animation-delay="600">
@@ -131,7 +124,7 @@
                                         </div>
                                     </div>
                                     <div class="progress-label">
-                                        <span>Phase 4</span>
+                                        <span>Faz 3</span>
                                     </div>
                                     <div class="progress progress-sm">
                                         <div class="progress-bar progress-bar-primary" data-appear-progress-animation="85%" data-appear-animation-delay="900">
@@ -139,7 +132,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--}}
                         </div>
                     </div>
 

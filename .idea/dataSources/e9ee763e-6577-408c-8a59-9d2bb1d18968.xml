@@ -1447,7 +1447,7 @@
     </column>
     <column id="338" parent="249" name="proje_aciklama">
       <Position>3</Position>
-      <DataType>varchar(555)|0s</DataType>
+      <DataType>varchar(1555)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

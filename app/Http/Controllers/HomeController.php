@@ -102,6 +102,7 @@ class HomeController extends Controller
     }
     public function projeler(){
         $projeler = Proje::all();
+
         return view('anasayfa.projeler',compact('projeler'));
     }
     public function proje($id){
