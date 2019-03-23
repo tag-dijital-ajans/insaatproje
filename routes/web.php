@@ -41,6 +41,7 @@ Route::delete('kullanicisil/{id}','YonetimKurumsalController@kullanicisil')->nam
 Route::get('iletisim','YonetimKurumsalController@iletisim')->name('iletisim');
 Route::post('iletisim','YonetimKurumsalController@iletisimgonder')->name('iletisim.gonder');
 Route::resource('galeri','GaleriController');
+Route::resource('resimler','ProjegaleriController');
 
 });
 
@@ -77,6 +78,8 @@ Route::get('/haber/{id}/{slug}','HomeController@haber');
 //Projeler
 Route::get('/projeler','HomeController@projeler')->name('projeleri.goster');
 Route::get('/proje/{id}/{slug}','HomeController@proje');
+Route::get('/link');
+Route::post('/link');
 //Galeri
 Route::get('/galeriler','HomeController@galeriler')->name('galeriler.goster');
 Route::get('/galeri','HomeController@galeri');

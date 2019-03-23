@@ -25,9 +25,14 @@
                                 <h2 class="mb-none">{{$proje->proje_adi}}</h2>
                             </div>
                             <div class="portfolio-nav col-md-1">
-                                <a href="" class="portfolio-nav-prev" data-tooltip data-original-title="Geri"><i class="fa fa-chevron-left"></i></a>
-                                <a href="" class="portfolio-nav-next" data-tooltip data-original-title="İleri"><i class="fa fa-chevron-right"></i></a>
+                                @if(isset($prev))
+                                <a href="{{url("proje/$prev/slug")}}" class="portfolio-nav-prev" data-tooltip data-original-title="Geri"><i class="fa fa-chevron-left"></i></a>
+                                @endif
+                                @if(isset($next))
+                                <a href="{{url("proje/$next/slug")}}" class="portfolio-nav-next" data-tooltip data-original-title="İleri"><i class="fa fa-chevron-right"></i></a>
+                                    @endif
                             </div>
+
                         </div>
                     </div>
 
@@ -39,13 +44,14 @@
                 <div class="col-md-4">
                     <div class="thumb-gallery">
                         <div class="lightbox" data-plugin-options='{"delegate": "a", "type": "image", "gallery": {"enabled": true}}'>
-                          {{--  @foreach($projeler as $proje)--}}
+                           {{-- @foreach($projeler as $proje)--}}
+                            @foreach($fotolar as $foto)
                             <div class="owl-carousel owl-theme manual thumb-gallery-detail show-nav-hover" id="thumbGalleryDetail">
                                 <div>
-                                    <a href="/{{$proje->proje_resim}}">
+                                    <a href="/proje/{{$foto->id}}/{{$foto->resim}}">
 												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders font-size-xl">
 													<span class="thumb-info-wrapper font-size-xl">
-														<img alt="Project Image" src="/{{$proje->proje_resim}}" class="img-responsive">
+														<img alt="Project Image" src="/proje/{{$foto->id}}/{{$foto->resim}}" class="img-responsive">
 														<span class="thumb-info-title font-size-xl">
 															<span class="thumb-info-inner font-size-xl"><i class="icon-magnifier icons font-size-xl"></i></span>
 														</span>
@@ -54,15 +60,16 @@
                                     </a>
                                 </div>
                             </div>
-                    {{--        @endforeach
---}}
+                          @endforeach
+
                         </div>
 
                         <div class="owl-carousel owl-theme manual thumb-gallery-thumbs mt" id="thumbGalleryThumbs">
 
                             <div>
-                                <img alt="Project Image" src="/{{$proje->proje_resim}}" class="img-responsive cur-pointer">
+                                <img alt="Project Image" src="/{{$foto->resim}}" class="img-responsive cur-pointer">
                             </div>
+
                         </div>
                     </div>
                 </div>

@@ -71,6 +71,7 @@
                         </div>
                     </div>
 
+
                     <div class="control-group">
                         <label class="control-label">Proje Resmi</label>
                         <div class="controls">
@@ -88,17 +89,28 @@
         </div>
 
     </div>
+    //->
+
+    {!! Form::open(array('method'=>'POST','action'=>'ProjegaleriController@store','class'=>'dropzone','files'=>'true','multiple'=>'true')) !!}
+
+
+    {!! Form::close() !!}
+
+
+
 
 @endsection
 
 @section('css')
-
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
 @endsection
 
 @section('js')
     <script src="/adminkurumsal/tinymce/js/tinymce/tinymce.min.js"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
 
+
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
 @endsection
 
 {{--

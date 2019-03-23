@@ -111,8 +111,7 @@ class Proje_KategoriController extends Controller
 
         $proje_kategori = Proje_Kategori::find($id);
         $proje_kategori->proje_kategori = request('proje_kategori');
-      /*  $proje_kategori->kategori_aciklama = request('kategori_aciklama');*/
-        $proje_kategori->proje_slug = str_slug(request('proje_slug'));
+        $proje_kategori->proje_slug = str_slug(request('proje_kategori'));
 
         $proje_kategori->save();
         if($proje_kategori){
@@ -120,7 +119,8 @@ class Proje_KategoriController extends Controller
             alert()
                 ->success('Başarılı', 'Kategori Güncellendi')
                 ->autoClose(2000);
-            return back();
+            return redirect()->route('proje_kategori.index');
+
         }else{
             alert()
                 ->error('Başarısız', 'Kategori Güncellenemedi')

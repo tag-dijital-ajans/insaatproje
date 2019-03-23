@@ -17,4 +17,6 @@ class Proje extends Model
 
 
 
+
+
 }

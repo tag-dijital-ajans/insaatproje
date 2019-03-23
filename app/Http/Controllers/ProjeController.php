@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Projegaleri;
 use Illuminate\Http\Request;
 use App\Proje;
 use App\Proje_Kategori;
 use Illuminate\Support\Facades\Validator;
+
 
 class ProjeController extends Controller
 {
@@ -17,7 +19,8 @@ class ProjeController extends Controller
     public function index()
     {
         $projeler = Proje::all();
-        return view('adminkurumsal.projeler.index',compact('projeler'));
+        $resimler = Projegaleri::all();
+        return view('adminkurumsal.projeler.index',compact('projeler','resimler'));
     }
 
     /**
@@ -27,7 +30,9 @@ class ProjeController extends Controller
      */
     public function create()
     {
+
         $proje_kategorileri = Proje_Kategori::all();
+
         return view('adminkurumsal.projeler.create',compact('proje_kategorileri'));
     }
 
@@ -47,11 +52,13 @@ class ProjeController extends Controller
         }*/
         //Yetki Kontrol
 
+
         $this->validate(request(), array(
 
             'proje_adi' => 'required',
             'proje_tipi' => 'required',
             'proje_lokasyon' => 'required',
+
 
 
         ));
@@ -96,7 +103,9 @@ class ProjeController extends Controller
                 }
 
 
+
             }
+
 
 
             $proje->save();

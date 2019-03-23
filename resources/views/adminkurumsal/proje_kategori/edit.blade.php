@@ -23,10 +23,10 @@
                             <input type="text" class="span11" name="proje_kategori"  value="{{$proje_kategori->proje_kategori}}" />
                         </div>
                     </div>
-                   {{-- <div class="control-group">
-                        <label class="control-label">Proje Kategori Açıklama</label>
+                  {{--  <div class="control-group">
+                        <label class="control-label">Proje Kategori Seo</label>
                         <div class="controls">
-                            <input type="text" class="span11" name="kategori_aciklama" value="{{$kategori->kategori_aciklama}}"  />
+                            <input type="text" class="span11" name="proje_slug" value="{{$proje_kategori->proje_slug}}"  />
                         </div>
                     </div>--}}
 

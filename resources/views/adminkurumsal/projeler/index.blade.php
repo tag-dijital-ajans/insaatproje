@@ -11,12 +11,12 @@
             <table class="table table-bordered data-table">
                 <thead>
                 <tr>
-                    <th>P. Kategorisi</th>
-                    <th>P. Adı</th>
-                    <th>P. Açıklama </th>
+                    <th>Kategorisi</th>
+                    <th>Adı</th>
+                    <th>Açıklama </th>
                     <th>Proje lokasyonu</th>
-                    <th>Proje Tipi</th>
-                    <th>Proje Müşteri</th>
+                    <th>Tipi</th>
+                    <th>Müşteri</th>
                     <th width="5%">Düzenle</th>
                     <th width="5%">Sil</th>
                 </tr>
@@ -44,6 +44,8 @@
 
 
                         <td>{{$proje->proje_musteri}}</td>
+
+
                             <td class="center"><a href="{{route('projeler.edit',$proje->id)}}" class="btn btn-success btn-mini">Düzenle</a></td>
 
                         {!! Form::model($proje,['route'=>['projeler.destroy',$proje->id],'method'=>'DELETE']) !!}
@@ -66,6 +68,30 @@
         </div>
     </div>
 
+  {{--  <div style="float:right;margin:15px 0 5px 0;"><a href="{{route('projeler.create')}}" class="btn btn-success">Resim Yükle</a></div>--}}
+    <div style="clear:both;"></div>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="widget-box">
+                <div class="widget-title"> <span class="icon"> <i class="icon-picture"></i> </span>
+                    <h5>Resim Galerisi</h5>
+                </div>
+                <div class="widget-content">
+                    <ul class="thumbnails">
+                        @foreach($resimler as $resim)
+                            <li class="span2"> <a> <img src="/{{$resim->resim}}" alt="" width="240" height="40" > </a>
+                                <div class="actions"> <a title="" class="" href="{{route('resimler.destroy',$resim->id)}}" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Resim Silinsin Mi?"><i class="icon-trash"></i></a> <a class="lightbox_trigger" href="/{{$resim->resim_yolu}}"><i class="icon-search"></i></a> </div>
+                            </li>
+                        @endforeach
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     {{--	<form action="{{route('kategoriler.destroy',$kategori->id)}}" method="DELETE">
         {{csrf_field()}}
     </form>--}}
@@ -73,11 +99,17 @@
 @endsection
 
 @section('css')
+
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+
     <link rel="stylesheet" href="/admin/css/uniform.css" />
     <link rel="stylesheet" href="/admin/css/select2.css" />
 @endsection
 
 @section('js')
+
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+
     <script src="/admin/js/excanvas.min.js"></script>
     <script src="/admin/js/jquery.min.js"></script>
     <script src="/admin/js/jquery.ui.custom.js"></script>
@@ -86,6 +118,73 @@
     <script src="/admin/js/jquery.dataTables.min.js"></script>
     <script src="/admin/js/matrix.tables.js"></script>
 
+
+    <script>
+
+        (function(window, $, undefined) {
+            var Laravel = {
+                initialize: function() {
+                    this.methodLinks = $('a[data-method]');
+                    this.token = $('a[data-token]');
+                    this.registerEvents();
+                },
+                registerEvents: function() {
+                    this.methodLinks.on('click', this.handleMethod);
+                },
+                handleMethod: function(e) {
+                    e.preventDefault()
+                    var link = $(this)
+                    var httpMethod = link.data('method').toUpperCase()
+                    var form
+
+                    if ($.inArray(httpMethod, ['PUT', 'DELETE']) === -1) {
+                        return false
+                    }
+                    Laravel
+                        .verifyConfirm(link)
+                        .done(function () {
+                            form = Laravel.createForm(link)
+                            form.submit()
+                        })
+                },
+                verifyConfirm: function(link) {
+                    var confirm = new $.Deferred()
+                    var userResponse = window.confirm(link.data('confirm'))
+                    if (userResponse) {
+                        confirm.resolve(link)
+                    } else {
+                        confirm.reject(link);
+                    }
+                    return confirm.promise()
+                },
+                createForm: function(link) {
+                    var form =
+                        $('<form>', {
+                            'method': 'POST',
+                            'action': link.attr('href')
+                        });
+                    var token =
+                        $('<input>', {
+                            'type': 'hidden',
+                            'name': '_token',
+                            'value': link.data('token')
+                        });
+                    var hiddenInput =
+                        $('<input>', {
+                            'name': '_method',
+                            'type': 'hidden',
+                            'value': link.data('method')
+                        });
+                    return form.append(token, hiddenInput)
+                        .appendTo('body');
+                }
+            };
+            Laravel.initialize();
+        })(window, jQuery);
+
+
+
+    </script>
 @endsection
 
 

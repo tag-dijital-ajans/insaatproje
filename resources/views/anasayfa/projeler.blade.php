@@ -19,11 +19,15 @@
                 <div class="col-md-12">
 
                     <ul class="nav nav-pills sort-source font-size-sm" data-sort-id="portfolio" data-option-key="filter" data-plugin-options='{"layoutMode": "fitRows", "filter": "*"}'>
-                        <li data-option-value="*" class="active"><a href="#">Hepsini Göster</a></li>
-                        <li data-option-value=".pre-construction"><a href="#">Tamamlananlar</a></li>
+                        <li data-option-value="*" class="active"><a href="#">Tüm Projeler</a></li>
+                        @foreach($projekategoriler as $proje)
+                        <li data-option-value=".{{$proje->proje_slug}}" ><a href="#">{{$proje->proje_kategori}}</a></li>
+                        @endforeach
+                        {{--<li data-option-value=".pre-construction"><a href="#">Tamamlananlar</a></li>
                         <li data-option-value=".general-construction"><a href="#">Güncel Olanlar</a></li>
                         <li data-option-value=".plumbing"><a href="#">Su Tesisatı</a></li>
-                        <li data-option-value=".painting"><a href="#">Boyananlar</a></li>
+                        <li data-option-value=".painting"><a href="#">Boyananlar</a></li>--}}
+
                     </ul>
 
                     <hr class="solid mt-xlg mb-xlg">
@@ -33,7 +37,7 @@
                         <div class="sort-destination-loader sort-destination-loader-showing">
                             <ul class="portfolio-list sort-destination" data-sort-id="portfolio">
                                 @foreach($projeler as $proje)
-                                <li class="col-md-4 isotope-item mb-xlg pre-construction">
+                                <li class="col-md-4 isotope-item mb-xlg {{$proje->kategorisi->proje_slug}}">
                                     <a href="/proje/{{$proje->id}}/{{$proje->slug}}">
 
 												<span class="thumb-info thumb-info-centered-info thumb-info-no-borders">

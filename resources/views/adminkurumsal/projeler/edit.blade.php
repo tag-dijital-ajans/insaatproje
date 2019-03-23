@@ -72,6 +72,7 @@
                         </div>
                     </div>
 
+
                   {{--  <div class="control-group">
                         <label class="control-label">Mevcut Resmi</label>
                         <div class="controls">
@@ -98,6 +99,7 @@
 
     </div>
 
+
 @endsection
 
 @section('css')
@@ -107,6 +109,8 @@
 @section('js')
     <script src="/adminkurumsal/tinymce/js/tinymce/tinymce.min.js"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
+
+
 
 @endsection
 

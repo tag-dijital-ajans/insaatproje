@@ -24,13 +24,13 @@
                             <input type="text" class="span11" name="proje_kategori"  />
                         </div>
                     </div>
-                    <div class="control-group">
+                 {{--   <div class="control-group">
                         <label class="control-label">Seo İçin Açıklama</label>
                         <div class="controls">
                             <input type="text" class="span11" name="proje_slug"  />
                         </div>
                     </div>
-
+--}}
 
                     <div class="form-actions">
                         <button type="submit" class="btn btn-success">Proje Kategori Ekle</button>

@@ -6,6 +6,8 @@ use App\Galeri;
 use App\Hizmet;
 use App\Kategori;
 use App\Proje;
+use App\Proje_Kategori;
+use App\Projegaleri;
 use App\Referans;
 use App\Sayfa;
 use App\Menu;
@@ -13,6 +15,7 @@ use App\Slider;
 use App\Yazi;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
 
@@ -33,6 +36,7 @@ class HomeController extends Controller
         $partners = Referans::all();
         $projeler = Proje::orderby('created_at','desc')->take(7)->get();
         $referanslar = Referans::orderby('created_at','desc')->take(7)->get();
+
 
 
 
@@ -72,6 +76,7 @@ class HomeController extends Controller
     }
 
 
+
     public function hizmetler(){
 
         $hizmetler = Hizmet::all();
@@ -102,13 +107,19 @@ class HomeController extends Controller
     }
     public function projeler(){
         $projeler = Proje::all();
-
-        return view('anasayfa.projeler',compact('projeler'));
+        $projekategoriler = Proje_Kategori::all();
+        $projemenu = Proje::orderby('created_at','desc')->take(5)->get();
+        return view('anasayfa.projeler',compact('projeler','projekategoriler','projemenu'));
     }
     public function proje($id){
         $proje = Proje::find($id);
         $projeler = Proje::all();
-        return view ('anasayfa.proje',compact('proje','projeler'));
+        $prev = Proje::where('id','<', $proje->id)->max('id');
+        $next = Proje::where('id','>', $proje->id)->min('id');
+        $projemenukategori = Proje_Kategori::all();
+        $fotolar = Projegaleri::all();/*where('id', '!=', $id)->take(4)->get();*/
+
+        return view ('anasayfa.proje',compact('proje','projeler','projemenukategori','prev','next','fotolar'));
 
 
     }
