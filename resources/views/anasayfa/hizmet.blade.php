@@ -22,18 +22,18 @@
                     <aside class="sidebar">
 
                         <ul class="nav nav-list mb-xl show-bg-active">
-                            <li><a href="demo-construction-services.html">genel bakış</a></li>
-                            <li><a href="demo-construction-services-detail.html">  İnşaat öncesi</a></li>
-                            <li class="active"><a href="demo-construction-services-detail.html">  Genel yapı</a></li>
-                            <li><a href="demo-construction-services-detail.html">su tesisatı</a></li>
-                            <li><a href="demo-construction-services-detail.html">boyama</a></li>
+                            <li><a href="demo-construction-services.html"> Lorem Ipsum Nedir?</a></li>
+                            <li><a href="demo-construction-services-detail.html"> Lorem Ipsum Nedir?</a></li>
+                            <li class="active"><a href="demo-construction-services-detail.html"> Lorem Ipsum Nedir?</a></li>
+                            <li><a href="demo-construction-services-detail.html"> Lorem Ipsum Nedir?</a></li>
+                            <li><a href="demo-construction-services-detail.html"> Lorem Ipsum Nedir?</a></li>
                         </ul>
 
 
 
 
                         <h4 class="pt-xl mb-md text-color-dark">Bizimle İletişime Geçin</h4>
-                        <p>Size nasıl yardımcı olabileceğimizi öğrenmek için bizimle iletişime geçin veya bizi arayın.</p>
+                        <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. </p>
 
                         <form id="contactForm" action="php/contact-form.php" method="POST" class="mb-xlg">
                             <div class="row">
@@ -98,6 +98,7 @@
 
                         <div class="row">
                             <div class="col-md-5">
+
                                 <p class="pb-xl">{!! $hizmet->hizmet_icerik!!}</p>
                             </div>
                             <div class="col-md-7">
@@ -120,7 +121,7 @@
                     <h4 class="mt-xlg mb-md">Diğer Yazılarımız</h4>
     @foreach($yazilar as $yazi)
                     <ul class="list list-icons list-primary mt-xl mb-xlg">
-                        <li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"><i class="fa fa-check"></i> {!! $yazi->icerik !!} </li>
+                        <li class="appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"><i class="fa fa-check"></i> <p>{{str_limit(strip_tags($yazi->icerik),$limit=60,$end='...')}}</p> {{--{!! $yazi->icerik !!}--}} </li>
 
                     </ul>
 

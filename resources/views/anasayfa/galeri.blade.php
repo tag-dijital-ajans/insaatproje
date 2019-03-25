@@ -5,8 +5,8 @@
         <div class="container">
             <div class="banner-top">
                 <div class="banner-text">
-                    <h2>Abc İnşaat Yapı</h2>
-                    <h1>Geleceği Yapılandırıyoruz</h1>
+                    <h2>{{$ayar->site_adi}}</h2>
+                    <h1>Lorem Ipsum Nedir?</h1>
                     <div class="banner-btn">
                         <a href="{{route('hakkimizda.goster')}}">Daha Fazla</a>
                     </div>
@@ -31,8 +31,8 @@
                         <a href="/{{$galeri->resim_yolu}}"  rel="resim" class="b-link-stripe b-animate-go  thickbox">
                             <img src="/{{$galeri->resim_yolu}}" height="200" alt="" />
                             <div>
-                                <h5>Abc İnşaat</h5>
-                                <span>İşinde ve bölgesinde en iyi inşaat sektörü</span>
+                                <h5>{{$ayar->site_adi}}</h5>
+                                <span>Lorem Ipsum Nedir?</span>
                             </div>
                         </a>
                     </li>

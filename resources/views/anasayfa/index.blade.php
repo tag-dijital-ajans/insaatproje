@@ -12,7 +12,7 @@
                 <img src="/anasayfa/img/dotted-line-angle.png" class="img-responsive" />
             </div>
             <div class="col-md-6">
-                <p class="mt-xl">Konut ve yeşil alanlardan ulaşım ve ve altyapıya pek çok alanda yürüttüğü prestijli projelerle Türkiye'de inşaat sektöründe öncü konuma gelen firmamız "{{$ayar->site_adi}} "; profesyonel ekibi ve üstün kalite anlayışıyla Türkiye'nin ve Dünya'nın geleceğine yatırım yapmayı sürdürüyoruz..</p>
+                <p class="mt-xl">{{$ayar->onyazi}}</p>
                 <a class="mt-md" href="{{route('hakkimizda.goster')}}">Daha Fazla.. <i class="fa fa-long-arrow-right"></i></a>
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="row pt-xl">
                 <div class="col-md-12">
                     <h2 class="mb-none text-color-dark">Projeler</h2>
-                    <p class="lead">Merhaba Proje</p>
+                    <p class="lead">Lorem Ipsum Nedir?</p>
 
                     <div class="diamonds-wrapper lightbox" data-plugin-options='{"delegate": ".diamond", "type": "image", "gallery": {"enabled": true}}'>
                         <ul class="diamonds">
@@ -58,7 +58,7 @@
             </div>
             <div class="row row-diamons-description">
                 <div class="col-md-6">
-                    <p>Kuşadası Adavizyon Yapı İnşaat Taahüt ve Ticari Anonim Şirketi</p>
+                    <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
                     <a class="btn btn-borders btn-primary" href="{{route('projeleri.goster')}}">Bütün Projeleri Görüntüle</a>
                 </div>
             </div>
@@ -142,7 +142,7 @@
     <div class="row pt-xl">
         <div class="col-md-12">
             <h2 class="mb-none text-color-dark">Haber Yazıları</h2>
-            <p class="lead mb-sm">Merhaba bu ilk haber yazısı.</p>
+            <p class="lead mb-sm">Lorem Ipsum Nedir?</p>
         </div>
     </div>
     <div class="row">
@@ -162,7 +162,8 @@
                     </div>
                     <h4 class="pt-md pb-none mb-none"><a class="text-color-dark" href="/haber/{{$icerik->id}}/{{$icerik->slug}}">{{$icerik->baslik}}</a></h4>
                     <p>By admin</p>
-                    <p>{!! $icerik->icerik !!}</p>
+                    <p>{{str_limit(strip_tags($icerik->icerik),$limit=76,$end='...')}}</p>
+                 {{--   <p>{!! $icerik->icerik !!}</p>--}}
                     <a class="mt-md" href="/haber/{{$icerik->id}}/{{$icerik->slug}}">Daha Fazla <i class="fa fa-long-arrow-right"></i></a>
                 </article>
 

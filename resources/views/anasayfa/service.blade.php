@@ -19,11 +19,11 @@
                     <aside class="sidebar">
 
                         <ul class="nav nav-list mb-xl show-bg-active">
-                            <li><a href="demo-construction-services.html">genel bakış</a></li>
-                            <li><a href="demo-construction-services-detail.html">  İnşaat öncesi</a></li>
-                            <li class="active"><a href="demo-construction-services-detail.html">  Genel yapı</a></li>
-                            <li><a href="demo-construction-services-detail.html">su tesisatı</a></li>
-                            <li><a href="demo-construction-services-detail.html">boyama</a></li>
+                            <li><a href="demo-construction-services.html">Lorem Ipsum Nedir?</a></li>
+                            <li><a href="demo-construction-services-detail.html">  Lorem Ipsum Nedir?</a></li>
+                            <li class="active"><a href="demo-construction-services-detail.html">  Lorem Ipsum Nedir?</a></li>
+                            <li><a href="demo-construction-services-detail.html"> Lorem Ipsum Nedir?</a></li>
+                            <li><a href="demo-construction-services-detail.html"> Lorem Ipsum Nedir?</a></li>
                         </ul>
 
 

@@ -117,9 +117,10 @@ class HomeController extends Controller
         $prev = Proje::where('id','<', $proje->id)->max('id');
         $next = Proje::where('id','>', $proje->id)->min('id');
         $projemenukategori = Proje_Kategori::all();
-        $fotolar = Projegaleri::all();/*where('id', '!=', $id)->take(4)->get();*/
+        $projegaleri =Projegaleri::where('proje',$id)->get();
 
-        return view ('anasayfa.proje',compact('proje','projeler','projemenukategori','prev','next','fotolar'));
+
+        return view ('anasayfa.proje',compact('proje','projeler','projemenukategori','prev','next','projegaleri'));
 
 
     }

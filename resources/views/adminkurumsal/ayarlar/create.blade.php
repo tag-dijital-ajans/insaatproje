@@ -45,6 +45,13 @@
                                 <input type="text" class="span11" name="site_adi" value="{{$ayarlar->site_adi}}" />
                             </div>
                         </div>
+                    <div class="control-group">
+                        <label class="control-label"> Ön Yazi</label>
+                        <div class="controls">
+                            <textarea class="span11" placeholder="Site anasayfa açıklaması" name="onyazi">{{$ayarlar->onyazi}}</textarea>
+                            {{--Input Tipi Değişti--}}
+                        </div>
+                    </div>
                         <div class="control-group">
                             <label class="control-label">Firma Adresi</label>
                             <div class="controls">

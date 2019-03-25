@@ -62,10 +62,9 @@ class AyarController extends Controller
 
         $ayar = Ayar::find(1);
         $ayar->site_adi = request('site_adi');
+        $ayar->onyazi = request('onyazi');
         $ayar->firma_adres = request('firma_adres');
         $ayar->email = request('email');
-
-
         $ayar->telefon = request('telefon');
         $ayar->tag_manager_kod = request('tag_manager_kod');
         $ayar->tag_manager_script = request('google_map');

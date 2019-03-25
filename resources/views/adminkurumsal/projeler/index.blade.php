@@ -69,7 +69,7 @@
     </div>
 
   {{--  <div style="float:right;margin:15px 0 5px 0;"><a href="{{route('projeler.create')}}" class="btn btn-success">Resim Yükle</a></div>--}}
-    <div style="clear:both;"></div>
+   {{-- <div style="clear:both;"></div>
     <div class="row-fluid">
         <div class="span12">
             <div class="widget-box">
@@ -91,7 +91,7 @@
         </div>
     </div>
     </div>
-
+--}}
     {{--	<form action="{{route('kategoriler.destroy',$kategori->id)}}" method="DELETE">
         {{csrf_field()}}
     </form>--}}

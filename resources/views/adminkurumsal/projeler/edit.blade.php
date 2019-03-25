@@ -98,6 +98,47 @@
         </div>
 
     </div>
+    <div style="clear:both;"></div>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="widget-box">
+                <div class="widget-title"> <span class="icon"> <i class="icon-picture"></i> </span>
+                    <h5>Resim Galerisi</h5>
+                </div>
+                <div class="widget-content">
+                    <ul class="thumbnails">
+
+
+                        @foreach($resimler as $resim)
+                            <li class="span2">
+                                {!! Form::model($resim,['route'=>['resimler.destroy',$resim->id],'method'=>'DELETE']) !!}
+                                <img src="/{{$resim->resim}}" alt="" width="240" height="40" >
+                                <br>
+                                    <button type="submit" onclick="return window.confirm('Silmek istediğinize eminmisiniz?');" class="btn btn-danger btn-mini">Sil</button>
+
+
+                                {!! Form::close() !!}
+
+
+
+                            </li>
+                        @endforeach
+
+                        {{--@foreach($resimler as $resim)
+                            <li class="span2"> <a> <img src="/{{$resim->resim}}" alt="" width="240" height="40" > </a>
+                                <div class="actions"> <a title="" class="" href="{{route('projeresim.sil',$resim->id)}}" data-method="delete" data-token="{{csrf_token()}}" data-confirm="Resim Silinsin Mi?"><i class="icon-trash"></i></a> <a class="lightbox_trigger" href="/{{$resim->resim_yolu}}"><i class="icon-search"></i></a> </div>
+                            </li>
+                        @endforeach--}}
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
 
 @endsection

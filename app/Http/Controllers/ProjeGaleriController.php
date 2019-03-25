@@ -111,8 +111,10 @@ return view ('adminkurumsal.projeler.index');
         alert()
             ->success('Başarılı', 'Resim Silindi')
             ->autoClose(2000);
-        return redirect()->route('projeler.index');
+        return back();
     }
+
+
 }
 
 

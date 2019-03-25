@@ -41,7 +41,9 @@ Route::delete('kullanicisil/{id}','YonetimKurumsalController@kullanicisil')->nam
 Route::get('iletisim','YonetimKurumsalController@iletisim')->name('iletisim');
 Route::post('iletisim','YonetimKurumsalController@iletisimgonder')->name('iletisim.gonder');
 Route::resource('galeri','GaleriController');
-Route::resource('resimler','ProjegaleriController');
+Route::resource('resimler','ProjeGaleriController');
+
+Route::delete('projeresimsil/{id}','ProjeGaleriController@destroy')->name('projeresim.sil');
 
 });
 

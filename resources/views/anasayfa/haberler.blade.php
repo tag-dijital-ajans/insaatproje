@@ -31,7 +31,9 @@
                         </div>
                         <h4 class="pt-md pb-none mb-none"><a class="text-color-dark" href="/haber/{{$haber->id}}/{{$haber->slug}}">{{$haber->baslik}}</a></h4>
                         <p>By admin</p>
-                        <p>{!! $haber->icerik !!}</p>
+
+                        <p>{{str_limit(strip_tags($haber->icerik),$limit=150,$end='...')}}</p>
+                       {{-- <p>{!! $haber->icerik !!}</p>--}}
                         <a class="mt-md" href="/haber/{{$haber->id}}/{{$haber->slug}}">Daha Fazla <i class="fa fa-long-arrow-right"></i></a>
 
                     </article>

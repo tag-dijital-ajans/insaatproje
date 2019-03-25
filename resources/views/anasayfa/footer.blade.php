@@ -2,10 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
+                <span class="size-w-4">
+								{{$ayar->footer_yazisi}}
+								</span>
                 <a href="/">
                     <img alt="Porto" class="img-responsive logo" width="110" src="/{{$ayar->favicon}}">
                 </a>
             </div>
+
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-md-6 mb-sm">
@@ -59,26 +63,37 @@
                  </div>
              </div>
              <div class="col-md-5">
-                 <h4>Bülten</h4>
+                 <h4>Adres</h4>
 
-                 <div class="newsletter">
+                <div class="newsletter">
 
-                     <div class="alert alert-success hidden" id="newsletterSuccess">
+                     {{--<div class="alert alert-success hidden" id="newsletterSuccess">
                          <strong>Success!</strong> You've been added to our email list.
                      </div>
 
-                     <div class="alert alert-danger hidden" id="newsletterError"></div>
+                     <div class="alert alert-danger hidden" id="newsletterError"></div>--}}
 
-                     <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
+								<span class="size-w-3">
+									<i class="fa fa-home" aria-hidden="true"></i>
+								</span>
+
+                        <span class="size-w-4">
+								{{$ayar->firma_adres}}
+								</span>
+
+
+                 {{--    <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
                          <div class="input-group">
-                             <input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+                             <input type=class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
                              <span class="input-group-btn">
                                              <button class="btn btn-default" type="submit"><i class="icon-paper-plane icons"></i></button>
                                          </span>
                          </div>
-                     </form>
+                     </form>--}}
 
                  </div>
+             <br/>
+
 
                  <p><i class="fa fa-phone"></i> {{$ayar->telefon}} <i class="fa fa-envelope ml-sm"></i> <a href="{{$ayar->email}}">{{$ayar->email}}</a></p>
 

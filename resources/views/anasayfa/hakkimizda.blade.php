@@ -68,11 +68,11 @@
                             </div>
                             <div class="col-md-5">
                                 <ul class="list list-unstyled list-primary list-borders">
-                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"><strong class="text-color-primary font-size-xl">2016 - </strong> Moves its headquarters to a new building</li>
-                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="100"><strong class="text-color-primary font-size-xl">2014 - </strong> Porto creates its new brand</li>
-                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="200"><strong class="text-color-primary font-size-xl">2006 - </strong> Porto opens it doors in London</li>
-                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300"><strong class="text-color-primary font-size-xl">2003 - </strong> Inauguration of the new office</li>
-                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="400"><strong class="text-color-primary font-size-xl">2001 - </strong> Porto goes into business</li>
+                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="0"><strong class="text-color-primary font-size-xl">2016 - </strong> Lorem Ipsum Nedir?</li>
+                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="100"><strong class="text-color-primary font-size-xl">2014 - </strong> Lorem Ipsum Nedir?</li>
+                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="200"><strong class="text-color-primary font-size-xl">2006 - </strong> Lorem Ipsum Nedir?</li>
+                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="300"><strong class="text-color-primary font-size-xl">2003 - </strong> Lorem Ipsum Nedir?</li>
+                                    <li class="pt-sm pb-sm appear-animation" data-appear-animation="fadeInUp" data-appear-animation-delay="400"><strong class="text-color-primary font-size-xl">2001 - </strong> Lorem Ipsum Nedir?</li>
                                 </ul>
                             </div>
                         </div>
