@@ -21,7 +21,7 @@
                 <tbody>
                 @foreach($referanslar as $referans)
                     <tr class="gradeX">
-                        <td>{{$referans->referans_adi}}</td>
+                        <td><img src="/{{$referans->referans_gorseli}}" width="150px" ></td>
                         <td>
 
 {!! str_limit(strip_tags($referans->firma_adi),$limit=100,$end='...') !!}

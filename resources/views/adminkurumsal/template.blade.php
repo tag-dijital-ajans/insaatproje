@@ -60,6 +60,7 @@
         <li> <a href="{{route('kullanicilar.index')}}"><i class="icon icon-user-md"></i> <span>Kullanıcı Yönetimi </span></a></li>
         <li> <a href="{{route('menuler.index')}}"><i class="icon icon-th"></i> <span>Menü Yönetimi</span></a></li>
         <li> <a href="{{route('galeri.index')}}"><i class="icon icon-picture"></i><span>Galeri Yönetimi</span> </a></li>
+        <li class="bg_lr"> <a href="{{route('yonetimkurumsal.cikis')}}"><i style="color: white" class="icon icon-off"></i> <span style="color: white">Çıkış </span></a> </li>
 
 
 

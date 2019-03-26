@@ -14,10 +14,10 @@
 
                         <div class="span6">
                             <ul class="site-stats">
-                                <li class="bg_lh"> <strong>{{$sayfacount}}</strong> <small>Sayfa</small></li>
-                                <li class="bg_lh"> <strong>{{$hizmetcount}}</strong> <small>Hizmetler</small></li>
-                                <li class="bg_lh"> <strong>{{$habercount}}</strong> <small>Haber</small></li>
-                                <li class="bg_lh"> <strong>{{$referanscount}}</strong> <small>Referans</small></li>
+                                <li class="bg_lb"> <strong>{{$projecount}}</strong> <small>Proje</small></li>
+                                <li class="bg_lg"> <strong>{{$hizmetcount}}</strong> <small>Hizmetler</small></li>
+                                <li class="bg_ly"> <strong>{{$habercount}}</strong> <small>Haber</small></li>
+                                <li class="bg_lo"> <strong>{{$referanscount}}</strong> <small>Referans</small></li>
 
                             </ul>
                         </div>

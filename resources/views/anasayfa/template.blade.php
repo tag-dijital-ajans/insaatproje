@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="/anasayfa/css/demos/demo-construction.css">
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="/anasayfa/css/custom.css">
+
 @yield('css')
     <!-- Head Libs -->
 

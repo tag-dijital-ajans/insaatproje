@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Ayar;
 use App\Hizmet;
 use App\Mail\iletisimformu;
+use App\Proje;
 use Illuminate\Http\Request;
 use App\User;
 use App\Yazi;
@@ -29,12 +30,12 @@ class YonetimKurumsalController extends Controller
         $lastnews = Yazi::orderby('created_at','desc')->take(10)->get();
 
 
-        $sayfacount = Sayfa::all()->count();
+        $projecount = Proje::all()->count();
         $habercount = Yazi::all()->count();
         $referanscount = Referans::all()->count();
         $hizmetcount = Hizmet::all()->count();
         return view('adminkurumsal.index',
-            compact('sayfacount','habercount','referanscount','hizmetcount','hizmetler','lastnews'));
+            compact('projecount','habercount','referanscount','hizmetcount','hizmetler','lastnews'));
     }
 
     /**

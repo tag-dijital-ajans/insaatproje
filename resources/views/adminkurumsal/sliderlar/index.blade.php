@@ -8,13 +8,11 @@
             <h5>Slider Yönetimi</h5>
         </div>
         <div class="widget-content nopadding">
-            <table class="table table-bordered data-table">
+            <table class="table table-bordered ">
                 <thead>
                 <tr>
-                    <th>Metin 1</th>
-                    <th>Metin 2</th>
-                    <th>Buton Metni</th>
-                    <th>Buton Linki</th>
+
+                    <th>Görsel</th>
                     <th>Sıra No</th>
                     <th width="5%">Düzenle</th>
                     <th width="5%">Sil</th>
@@ -23,14 +21,9 @@
                 <tbody>
                 @foreach($sliderlar as $slider)
                     <tr class="gradeX">
-                        <td>{{$slider->metin1}}</td>
-                        <td>
+                        <td><img src="/{{$slider->slider_resmi}}" width="200px"> </td>
 
-{!! str_limit(strip_tags($slider->metin2),$limit=100,$end='...') !!}
 
-                        </td>
-                        <td>{{$slider->buton_metni}}</td>
-                        <td>{{$slider->buton_linki}}</td>
                         <td>{{$slider->sira_no}}</td>
 
                         <td class="center"><a href="{{route('sliderlar.edit', $slider->id)}}"class="btn btn-success btn-mini">Düzenle</a> </td>

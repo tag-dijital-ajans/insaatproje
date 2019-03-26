@@ -11,12 +11,12 @@
             <table class="table table-bordered data-table">
                 <thead>
                 <tr>
-                    <th>Kategorisi</th>
-                    <th>Adı</th>
-                    <th>Açıklama </th>
-                    <th>Proje lokasyonu</th>
-                    <th>Tipi</th>
-                    <th>Müşteri</th>
+                    <th width="20%">Görsel</th>
+                    <th width="60%">Adı</th>
+
+                    <th width="10%">Proje lokasyonu</th>
+
+
                     <th width="5%">Düzenle</th>
                     <th width="5%">Sil</th>
                 </tr>
@@ -29,21 +29,11 @@
 
                     <tr class="gradeX">
 
-                        <td>
-                            {{$proje->kategorisi->proje_kategori}}
-
-                        </td>
-
-                        <td>{{$proje->proje_adi}}</td>
-
-                        <td>{!! $proje->proje_aciklama !!}</td>
-
+                       <td><img src="/{{$proje->proje_resim}}" width="150px"> </td>
+                        <td> {{$proje->proje_adi}} </td>
                         <td>{{$proje->proje_lokasyon}} </td>
 
-                        <td>{{$proje->proje_tipi}}</td>
 
-
-                        <td>{{$proje->proje_musteri}}</td>
 
 
                             <td class="center"><a href="{{route('projeler.edit',$proje->id)}}" class="btn btn-success btn-mini">Düzenle</a></td>

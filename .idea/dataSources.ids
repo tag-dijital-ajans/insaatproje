@@ -3,14 +3,17 @@
   <data-source name="egitimkurumsal@localhost" uuid="b531a0f0-7dba-4843-9072-c039944426a8">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
-  <data-source name="MySQL - lrvprojeweb@localhost" uuid="6e396a5a-3bac-4567-990c-1f5dd2d0a38b">
+  <data-source name="guncelegitimyeni@localhost" uuid="e9ee763e-6577-408c-8a59-9d2bb1d18968">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - lrvprojeinsaat@localhost" uuid="d11a2743-2d9d-4f90-a5ac-ac9edc82bc98">
     <database-info product="MySQL" version="5.5.5-10.1.33-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <schema name="" catalog="lrvprojeweb"/>
-    <table name="ayarlar" schema="" catalog="lrvprojeweb" type="TABLE">
+    <schema name="" catalog="lrvprojeinsaat"/>
+    <table name="ayarlar" schema="" catalog="lrvprojeinsaat" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="site_adi" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="firma_adres" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -20,7 +23,7 @@
       <column name="favicon" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="tag_manager_kod" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="tag_manager_script" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="email_smtp_sunucu" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email_smtp_sunucu" sqlType="VARCHAR" precision="555" scale="0" nullable="true" jdbcType="12"/>
       <column name="smtp_port" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="email_kullanici" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="email_sifre" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -33,23 +36,29 @@
       <column name="youtube" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="temarenk" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="onyazi" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
-    <table name="blog" schema="" catalog="lrvprojeweb" type="TABLE">
+    <table name="galeris" schema="" catalog="lrvprojeinsaat" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="blog_adi" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="blog_ust_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="blog_aciklamasi" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="yazi_baslik" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="yazi_icerik" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="yazi_kategorisi" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="yazi_one_cikan_foto" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="resim_yolu" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="resim_adi" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
-      <column name="slug" sqlType="VARCHAR" precision="250" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
-    <table name="kategoriler" schema="" catalog="lrvprojeweb" type="TABLE">
+    <table name="hizmetler" schema="" catalog="lrvprojeinsaat" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="hizmet_basligi" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="hizmet_icerik" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="hizmet_one_cikan_foto" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="slug" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="kategoriler" schema="" catalog="lrvprojeinsaat" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="kategori_baslik" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
       <column name="kategori_aciklama" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
@@ -58,7 +67,7 @@
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
-    <table name="menuler" schema="" catalog="lrvprojeweb" type="TABLE">
+    <table name="menuler" schema="" catalog="lrvprojeinsaat" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="menu_baslik" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="ozel_url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -67,41 +76,100 @@
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="sira_no" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="slug" sqlType="VARCHAR" precision="250" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
-    <table name="migrations" schema="" catalog="lrvprojeweb" type="TABLE">
+    <table name="migrations" schema="" catalog="lrvprojeinsaat" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="migration" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="batch" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
-    <table name="password_resets" schema="" catalog="lrvprojeweb" type="TABLE">
+    <table name="password_resets" schema="" catalog="lrvprojeinsaat" type="TABLE">
       <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="token" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <index name="password_resets_email_index" unique="false" columns="email"/>
     </table>
-    <table name="sayfalar" schema="" catalog="lrvprojeweb" type="TABLE">
+    <table name="proje_kategori" schema="" catalog="lrvprojeinsaat" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="proje_kategori" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="proje_slug" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="projegaleris" schema="" catalog="lrvprojeinsaat" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="resim" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="baslik" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="proje" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="projeler" schema="" catalog="lrvprojeinsaat" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="proje_adi" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="proje_aciklama" sqlType="VARCHAR" precision="555" scale="0" nullable="false" jdbcType="12"/>
+      <column name="proje_kategori_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="proje_resim" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="proje_lokasyon" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="proje_tipi" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="proje_musteri" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="proje_tarihi" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="slug" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="referanslar" schema="" catalog="lrvprojeinsaat" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="referans_adi" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="referans_gorseli" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="referans_aciklama" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="firma_adi" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sayfalar" schema="" catalog="lrvprojeinsaat" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="sayfa_basligi" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="sayfa_icerik" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="sayfa_one_cikan_foto" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="slug" sqlType="VARCHAR" precision="250" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
-    <table name="users" schema="" catalog="lrvprojeweb" type="TABLE">
+    <table name="sliderlar" schema="" catalog="lrvprojeinsaat" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="metin1" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="metin2" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="slider_resmi" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="buton_metni" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="buton_linki" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
+      <column name="sira_no" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="lrvprojeinsaat" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email_verified_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="password" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
-      <column name="yetki" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
-      <column name="avatar" sqlType="VARCHAR" precision="191" scale="0" nullable="true" jdbcType="12"/>
       <column name="remember_token" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="yetki" sqlType="VARCHAR" precision="22" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="unique_id" unique="true" columns="id"/>
+      <index name="users_email_unique" unique="true" columns="email"/>
     </table>
-    <table name="yazilar" schema="" catalog="lrvprojeweb" type="TABLE">
+    <table name="yazilar" schema="" catalog="lrvprojeinsaat" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="baslik" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="icerik" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
@@ -110,6 +178,7 @@
       <column name="resim" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="slug" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>

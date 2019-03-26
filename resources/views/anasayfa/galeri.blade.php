@@ -1,6 +1,13 @@
 @extends ('anasayfa.template')
 
 @section('icerik')
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+
     <div class="banner">
         <div class="container">
             <div class="banner-top">
@@ -38,6 +45,7 @@
                     </li>
 
 
+
 @endforeach
 
                     <div class="clearfix"> </div>
@@ -48,9 +56,12 @@
 
         </div>
     </div>
+    </body>
 @endsection
 
 @section('css')
+
+
     <link rel="stylesheet" href="/galeri/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
     <link href="/galeri/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="/galeri/css/style.css" rel='stylesheet' type='text/css' />
@@ -95,6 +106,7 @@
 
         });
     </script>
+
 
 
 

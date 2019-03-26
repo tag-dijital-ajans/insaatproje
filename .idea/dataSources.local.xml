@@ -2,20 +2,19 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="egitimkurumsal@localhost" uuid="b531a0f0-7dba-4843-9072-c039944426a8">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MYSQL" exact-version="0.0" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:@</introspection-schemas>
     </data-source>
     <data-source name="guncelegitimyeni@localhost" uuid="e9ee763e-6577-408c-8a59-9d2bb1d18968">
-      <database-info product="MySQL" version="5.7.21" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" family="MYSQL" exact-version="5.7.21">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:@</introspection-schemas>
+    </data-source>
+    <data-source name="MySQL - lrvprojeinsaat@localhost" uuid="d11a2743-2d9d-4f90-a5ac-ac9edc82bc98">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>lrvprojeinsaat.*</schema-pattern>
+      <default-schemas>lrvprojeinsaat.*</default-schemas>
     </data-source>
   </component>
 </project>
+
